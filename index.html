@@ -1,25 +1,42 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" href="//fonts.googleapis.com/css?family=Open+Sans">
   </head>
 
   <body>
-    <h1>Number Guesser</h1>
-      <h4>Guess a number between</h4>
-    <input class="low" type="number" placeholder="1">
-    <p>and</p>
-    <input class=
-    "high" type="number" placeholder="100">
-    <br/>
-    <input class="guess" type="number" placeholder="Enter your guess">
-    <button class="guess-button">Guess</button><button class="clear-button">Clear</button>
-    <div>
+    <h1 class="title-card">
+      <p class="title number">Number</p>
+      <p class="title guesser">Guesser</p>
+    </h1>
+
+    <div class="range-block">
+      <p class="range-prompt">Guess a number between</p>
+      <input class="low range" class="range" type="number" placeholder="1">
+      <p class="range">
+      and
+      </pclas>
+      <input class="high range" class="range" type="number" placeholder="100">
+    </div>
+
+    <br/><br/>
+
+    <div class="guess-block">
+      <input class="guess field" type="number" placeholder="Enter your guess">
+      <button class="guess-button button">Guess</button>
+      <button class="clear-button button">Clear</button>
+    </div>
+
+    <div class="feedback">
       <p class="last-guess-prompt"></p>
       <p class="last-guess"></p>
       <p class="clue"></p>
     </div>
-    <button class="reset-button">Reset</button>
+
+    <div class="reset-block">
+      <button class="reset-button button">Reset</button>
+    </div>
+
     <script src="scripts.js"></script>
 
   </body>

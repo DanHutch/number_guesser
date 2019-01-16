@@ -1,3 +1,68 @@
+body{
+  font-family: "Open Sans";
+}
+
 input{
   display: block;
 }
+
+.range{
+  display: inline;
+}
+
+.title-card{
+  background-color: #404041;
+  text-align: center;
+}
+
+.title{
+  display: inline;
+}
+
+.number{
+  color: #ED458B;
+  font-weight: 700;
+}
+
+.guesser{
+  color: #E6E7E8;
+  font-weight: 300;
+}
+
+.range-block{
+  text-align: center;
+}
+
+.guess-block{
+  text-align: center;
+}
+
+.guess{
+  margin: auto;
+  color: #404041;
+}
+
+.reset-block{
+  text-align: center;
+}
+
+.feedback{
+  text-align: center;
+  margin: auto;
+  color: #404041;
+}
+
+.last-guess{
+  color: #EB008B;
+  padding: 0fr;
+  padding-block-end: 0%;
+}
+
+.button{
+  background-color: #929497;
+  border-radius: 25px;
+  color: #FFFFFF;
+}
+
+
+

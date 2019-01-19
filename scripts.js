@@ -11,27 +11,21 @@ var lastGuess = document.querySelector('.last-guess');
 var resetButton = document.querySelector('.reset-button');
 var clearButton = document.querySelector('.clear-button');
 var lastGuessPrompt = document.querySelector('.last-guess-prompt');
-var roundIndicator = document.querySelector('.current-round')
-
+var roundIndicator = document.querySelector('.current-round');
 
 
 function makeMaster() {
   checkActive();
-
   roundIndicator.innerHTML = `Current Round: ${round + 1}`;
-
   min = (parseInt(low.value) || 1 - (round * 10));
   max = (parseInt(high.value) || 100 + (round * 10));
-
   masterNum = Math.floor(Math.random() * (max - min) + min);
-  console.log(round, masterNum, min, max);
 }
 
 function makeGuess() {
   let attempt = parseInt(userGuess.value);
   lastGuessPrompt.innerHTML = "Your last guess was";
   lastGuess.innerHTML = attempt;
-
   if(attempt === masterNum) {
     boom();
   }
@@ -74,14 +68,11 @@ function checkActiveReset() {
   }
 }
 
-
-
 function badGuess() {
   resetGuess();
   alert("Please guess a NUMBER within the specified RANGE!");
   lastGuess.innerHTML = "";
   hint.innerHTML = "not a valid guess";
-
 }
 
 function boom() {
@@ -125,7 +116,6 @@ function resetRange() {
   high.value = "";
   high.placeholder = "100";
 }
-
 
 window.addEventListener('load', makeMaster);
 low.addEventListener('change', makeMaster);

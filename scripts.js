@@ -21,6 +21,7 @@ function makeMaster() {
   max = (parseInt(high.value) || 100 + (round * 10));
   masterNum = Math.floor(Math.random() * (max - min) + min);
 }
+
 function makeGuess() {
   let attempt = parseInt(userGuess.value);
   lastGuessPrompt.innerHTML = "Your last guess was";

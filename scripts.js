@@ -1,15 +1,17 @@
-let masterNum;
-let round = 0;
-let low = document.querySelector('.low');
-let high = document.querySelector('.high');
-let userGuess = document.querySelector('.guess');
-let guessButton = document.querySelector('.guess-button');
-let hint = document.querySelector('.clue');
-let lastGuess = document.querySelector('.last-guess');
-let resetButton = document.querySelector('.reset-button');
-let clearButton = document.querySelector('.clear-button');
-let lastGuessPrompt = document.querySelector('.last-guess-prompt');
-let roundIndicator = document.querySelector('.current-round')
+var masterNum;
+var min;
+var max;
+var round = 0;
+var low = document.querySelector('.low');
+var high = document.querySelector('.high');
+var userGuess = document.querySelector('.guess');
+var guessButton = document.querySelector('.guess-button');
+var hint = document.querySelector('.clue');
+var lastGuess = document.querySelector('.last-guess');
+var resetButton = document.querySelector('.reset-button');
+var clearButton = document.querySelector('.clear-button');
+var lastGuessPrompt = document.querySelector('.last-guess-prompt');
+var roundIndicator = document.querySelector('.current-round')
 
 
 
@@ -18,8 +20,8 @@ function makeMaster() {
 
   roundIndicator.innerHTML = `Current Round: ${round + 1}`;
 
-  min = (parseInt(low.value) || 1) - (round * 10);
-  max = (parseInt(high.value) || 100) + (round * 10);
+  min = (parseInt(low.value) || 1 - (round * 10));
+  max = (parseInt(high.value) || 100 + (round * 10));
 
   masterNum = Math.floor(Math.random() * (max - min) + min);
   console.log(round, masterNum, min, max);
@@ -87,9 +89,9 @@ function boom() {
   resetGuess();
   alert(`BOOM! You guessed correctly! Now advanding to Round ${round + 1}`);
   hint.innerHTML = "BOOM!";
+  low.value = min -= 10;
+  high.value = max += 10;
   makeMaster();
-  low.value = min;
-  high.value = max;
 }
 
 function tooLow() {
